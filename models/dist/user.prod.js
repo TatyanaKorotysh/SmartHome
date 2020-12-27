@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),Schema=mongoose.Schema,schema=new Schema({login:{type:String,required:!0},password:{type:String,required:!0},email:{type:String},phone:{type:String},foto:{type:String},homeLogin:{type:String},template:{type:String},homeFoto:{type:String}});schema.set("toJSON",{virtuals:!0}),module.exports=mongoose.model("User",schema);

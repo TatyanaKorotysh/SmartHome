@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),Schema=mongoose.Schema,schema=new Schema({login:{type:String,required:!0},userLogin:{type:String,required:!0},room:{type:String,required:!0},type:{type:String,required:!0},condition:{type:String}});schema.set("toJSON",{virtuals:!0}),module.exports=mongoose.model("Device",schema);

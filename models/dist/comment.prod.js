@@ -1,0 +1,1 @@
+"use strict";var mongoose=require("mongoose"),Schema=mongoose.Schema,schema=new Schema({login:{type:String,required:!0},text:{type:String,required:!0}},{timestamps:!0});schema.set("toJSON",{virtuals:!0}),module.exports=mongoose.model("Comment",schema);
