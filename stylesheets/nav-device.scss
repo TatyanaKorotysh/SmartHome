@@ -1,0 +1,82 @@
+$green: #35ab80;
+$green-dark: #2d9770;
+$blue: #072847;
+$min: 30px;
+$middle: 50px;
+$text-big: 48px;
+$text-midle: 20px;
+$text-little: 16px;
+nav ul,
+nav p {
+    list-style: none;
+    margin: 0px 0px 0px -40px;
+}
+
+nav ul li,
+nav p {
+    padding: 20px 0px 20px 60px;
+    /*border-bottom: solid 1px #35AB80;*/
+    border-bottom: solid 1px;
+    border-image: linear-gradient(-45deg, #072847, #35ab80, #072847) 1;
+}
+
+nav ul a,
+nav li,
+nav p {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+nav ul li:hover,
+nav p:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+    display: none;
+}
+
+nav p img {
+    position: absolute;
+    left: 300px;
+    margin-top: 5px;
+    width: 25px;
+    transform: rotate(0deg);
+}
+
+nav #add {
+    position: fixed;
+    bottom: 10px;
+    left: 150px;
+}
+
+nav #add img {
+    width: 50px;
+}
+
+@media screen and (min-width: 950px) {
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -330px;
+        z-index: 5;
+        height: 100%;
+        width: 350px;
+        padding-top: $min;
+        background: linear-gradient(0deg, $green, $blue) center center;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    nav {
+        position: fixed;
+        top: 70px;
+        left: -330px;
+        z-index: 5;
+        height: 100%;
+        width: 350px;
+        padding-top: $min;
+        background: linear-gradient(0deg, $green, $blue) center center;
+    }
+}

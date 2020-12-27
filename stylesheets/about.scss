@@ -1,0 +1,109 @@
+$green: #35ab80;
+$green-dark: #2d9770;
+$gray: #666;
+$blue: #072847;
+$min: 30px;
+$middle: 50px;
+$text-big: 48px;
+$text-midle: 20px;
+$text-little: 16px;
+main {
+    padding: 0px 5% 0px 5%;
+    width: 100%;
+    opacity: 0;
+}
+
+main .foto {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $blue;
+}
+
+main #fotoUser {
+    background-image: url("/images/user.svg");
+    background-size: cover;
+}
+
+main #comm div {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+main .foto div p {
+    margin-left: 70px;
+}
+
+main .foto div {
+    width: 80%;
+    min-width: 1000px;
+}
+
+main #info,
+main #comm {
+    border-bottom: $green 1.5px solid;
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+    width: 90%;
+    text-align: justify;
+}
+
+main form {
+    width: 100%;
+}
+
+main form div {
+    text-align: center;
+    padding-right: 10%;
+}
+
+main form #Save,
+main form #Cancel {
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    margin: 30px 50px 30px 50px;
+    width: 300px;
+    font-size: 14px;
+}
+
+main form #Save:hover {
+    background-color: #fff;
+    color: $green;
+    border: 2px solid $green;
+}
+
+main form #Cancel:hover {
+    background-color: #fff;
+    color: $blue;
+    border: 2px solid $blue;
+}
+
+main form #Save {
+    background-color: $green;
+}
+
+main form #Cancel {
+    background-color: $blue;
+}
+
+textarea {
+    border: 1px solid $gray;
+    height: 150px;
+    margin-top: 20px;
+    width: 90%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#logo_img {
+    margin-top: 30px;
+    width: 80%;
+    padding: 0px 10% 30px 10%;
+}
+
+#text {
+    padding-top: 60px;
+}

@@ -1,0 +1,198 @@
+$green: #35ab80;
+$green-dark: #2d9770;
+$gray: #666;
+$blue: #072847;
+$min: 30px;
+$middle: 50px;
+$text-big: 48px;
+$text-midle: 20px;
+$text-little: 16px;
+main {
+    padding: 105px 0px 0px 385px;
+    font-size: 18px;
+    opacity: 0;
+}
+
+@media screen and (max-width: 950px) {
+    main {
+        padding: 105px 0px 0px 45px;
+    }
+    #form {
+        padding-left: 7%;
+    }
+    main #form form {
+        width: 70%;
+    }
+}
+
+main .foto {
+    width: 150px;
+    min-width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: $blue;
+}
+
+main #fotoUser {
+    background-image: url("/images/user.svg");
+    background-size: cover;
+}
+
+main #fotoHome {
+    background-image: url("/images/home.svg");
+    background-size: cover;
+}
+
+main #info {
+    border-bottom: $green 1.5px solid;
+    padding-bottom: 30px;
+    margin-bottom: 35px;
+    width: 97%;
+}
+
+main #info form {
+    display: flex;
+}
+
+main #input input {
+    display: none;
+}
+
+main #input p {
+    margin-top: 30px;
+}
+
+main #input {
+    margin: 50px 0px 0px 35px;
+}
+
+main #lable {
+    background-color: $blue;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main #lable:hover {
+    background-color: #fff;
+    color: $blue;
+    border: 2px solid $blue;
+}
+
+main #add_file {
+    background-color: $blue;
+    color: #ffffff;
+}
+
+main #form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    min-width: 500px;
+}
+
+main #form form div {
+    text-align: justify;
+}
+
+main #form input {
+    width: 80%;
+    margin: 20px 0px 20px -30px;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-bottom: 1px solid $gray;
+    font-size: 16px;
+}
+
+main #form select {
+    width: 81%;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    border: 1px solid $gray;
+    margin: 20px 0px 20px -30px;
+}
+
+main #form img {
+    width: 30px;
+    margin-left: 30px;
+}
+
+main #form div {
+    display: inline;
+    text-align: left;
+}
+
+main #form label {
+    position: relative;
+    color: $gray;
+    right: 30px;
+}
+
+main #form #Save,
+main #form #Cancel {
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    margin: 15px 50px 30px 50px;
+    width: 300px;
+}
+
+main #form #Save:hover {
+    background-color: #fff;
+    color: $green;
+    border: 2px solid $green;
+}
+
+main #form #Cancel:hover {
+    background-color: #fff;
+    color: $blue;
+    border: 2px solid $blue;
+}
+
+main #form #Save {
+    background-color: $green;
+}
+
+main #form #Cancel {
+    background-color: $blue;
+}
+
+
+/*main #form .g-recaptcha {
+    margin-right: 900px;
+}*/
+
+main #form #submit p {
+    text-align: center;
+}
+
+main #form a p {
+    position: relative;
+    width: 70%;
+    margin-top: -20px;
+    margin-bottom: -25px;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: $blue;
+    padding: 15px;
+    color: #ffffff;
+    opacity: 0;
+}
+
+main a {
+    text-decoration: none;
+}
+
+.password-control {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 100px;
+    background: url(/images/no-view_circle.svg) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(/images/view_circle.svg) 0 0 no-repeat;
+}

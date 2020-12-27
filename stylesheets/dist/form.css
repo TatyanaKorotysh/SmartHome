@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(180deg, #072847, #35ab80);
+  background-size: cover;
+  height: 100vh;
+  overflow-y: hidden;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 800px;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    width: 80%;
+  }
+}
+
+form {
+  margin-top: 20px;
+}
+
+article {
+  background-color: #fff;
+  padding: 50px;
+}
+
+article h1 {
+  font-size: 48px;
+  margin: 0px 0px 40px 0px;
+}
+
+article p {
+  margin-top: -30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+article form #login,
+article form #password {
+  width: 70%;
+  padding: 5px 5px 5px 5px;
+  border: none;
+  border-bottom: 1px solid #666;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+article form #submit {
+  background-color: #35ab80;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+  font-size: 20px;
+}
+
+article form #submit:hover {
+  background-color: #fff;
+  color: #35ab80;
+  border: 2px solid #35ab80;
+}
+
+.password-control {
+  position: absolute;
+  display: inline-block;
+  margin-left: -50px;
+  width: 40px;
+  height: 40px;
+  background: url(/images/no-view.svg) 0 0 no-repeat;
+}
+
+.password-control.view {
+  background: url(/images/view.svg) 0 0 no-repeat;
+}

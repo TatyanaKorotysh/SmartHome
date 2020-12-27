@@ -1,0 +1,88 @@
+$green: #35ab80;
+$green-dark: #2d9770;
+$blue: #072847;
+$min: 30px;
+$middle: 50px;
+$text-big: 48px;
+$text-midle: 20px;
+body {
+    background: linear-gradient(180deg, $blue, $green);
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: 800px;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+    main {
+        width: 80%;
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+article {
+    background-color: #fff;
+    padding: $middle;
+}
+
+article h1 {
+    font-size: $text-big;
+    margin: 0px 0px 40px 0px;
+}
+
+article p {
+    margin-top: -$min;
+    margin-bottom: $min;
+    font-size: $text-midle;
+}
+
+article form #login,
+article form #password {
+    width: 70%;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: $text-midle;
+    margin-bottom: $min;
+}
+
+article form #submit {
+    background-color: #35ab80;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    color: #fff;
+    font-size: $text-midle;
+}
+
+article form #submit:hover {
+    background-color: #fff;
+    color: $green;
+    border: 2px solid $green;
+}
+
+.password-control {
+    position: absolute;
+    display: inline-block;
+    margin-left: -50px;
+    width: 40px;
+    height: 40px;
+    background: url(/images/no-view.svg) 0 0 no-repeat;
+}
+
+.password-control.view {
+    background: url(/images/view.svg) 0 0 no-repeat;
+}

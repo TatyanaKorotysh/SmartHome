@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$(".password-control").click(function(){"password"==$("#password").attr("type")?($(this).addClass("view"),$("#password").attr("type","text")):($(this).removeClass("view"),$("#password").attr("type","password"))})});

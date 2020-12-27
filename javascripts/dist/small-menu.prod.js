@@ -1,0 +1,1 @@
+"use strict";function myFunction(){var n=document.getElementById("myTopnav");"topnav"===n.className?n.className+=" responsive":n.className="topnav"}$(document).ready(function(){$("#nav-icon").click(function(){$(this).toggleClass("open")})});

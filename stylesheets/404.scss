@@ -1,0 +1,110 @@
+$green: #35ab80;
+$green-dark: #2d9770;
+$gray: #666;
+$blue: #072847;
+body {
+    margin: 70px 0px 0px 0px;
+    background: linear-gradient(180deg, $blue, $green);
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+main {
+    padding-top: auto;
+}
+
+#text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 90%;
+    padding: 10pt;
+}
+
+#text div,
+#text p {
+    margin: 10pt;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#text p {
+    font-size: 350px;
+    color: #fff;
+}
+
+#text div {
+    width: 180px;
+    height: 180px;
+    margin: 90px 0px;
+    border: 45px solid #fff;
+    border-radius: 160px;
+}
+
+#back {
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+}
+
+#back p {
+    margin-top: -30px;
+}
+
+#back a {
+    padding: 10px 30px 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+#back a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.img {
+    position: absolute;
+    z-index: -1;
+    width: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    #text div {
+        width: 80px;
+        height: 80px;
+        margin: 90px 0px;
+        border: 30px solid #fff;
+        border-radius: 160px;
+    }
+    #text p {
+        font-size: 210px;
+        color: #fff;
+    }
+    #back {
+        text-align: center;
+        color: #fff;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #text div {
+        width: 60px;
+        height: 60px;
+        margin: 90px 0px;
+        border: 20px solid #fff;
+        border-radius: 160px;
+    }
+    #text p {
+        font-size: 170px;
+        color: #fff;
+    }
+    #back {
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+    }
+}
