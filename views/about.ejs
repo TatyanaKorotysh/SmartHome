@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>О приложении</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/about.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/stars.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg">
+        <!--<div cclass="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>-->
+        <div class="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <article id="info">
+            <img id="logo_img" src="/images/logo_black.svg">
+
+            <div class="stars" data-stars="4">
+                <svg class="star rating" viewBox='-8.5 0 18 20' data-rating='0.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='10.5 0 20 20' data-rating='1'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='-8.5 0 18 20' data-rating='1.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='10.5 0 20 20' data-rating='2'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='-8.5 0 18 20' data-rating='2.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='10.5 0 20 20' data-rating='3'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='-8.5 0 18 20' data-rating='3.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='10.5 0 20 20' data-rating='4'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='-8.5 0 18 20' data-rating='4.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+                <svg class="star rating" viewBox='10.5 0 20 20' data-rating='5.5'>
+                        <path
+                            d='M10.53 16.081l6.5 3.926-1.72-7.4 5.74-4.98-7.56-.65-2.96-6.981-2.96 6.981-7.56.65 5.74 4.98-1.72 7.4z'
+                            style='fill-rule:nonzero;'></path>
+                    </svg>
+            </div>
+            <div id="text">
+                <p>Веб-приложение "УмныйДом"</p>
+                <p>Данное веб-приложение было реализована в рамках курсового проекта по дисциплине "Дизайн Электронный и Веб-изданий." Приложение представляет собой демонстрацию базового функционала для управления умным домом.
+                </p>
+                <p>При реализации использовались такие технологии как: Express.js, MondoDB, EJS, HTML, CSS, SCSS, AJAX.
+                </p>
+                <p>Проект выполнил студент Факультета Информационных Технологий, 3 курса, 9 группы: Коротыш Татьяна.</p>
+            </div>
+        </article>
+
+        <article id="comm">
+            <% if(comments) {%>
+                <% comments.forEach(function(com){ %>
+                    <div class="foto" id="fotoUser">
+                        <div>
+                            <p>
+                                <%= com.login %><br>
+                                    <i><%= com.createdAt.getDate() %>.<%= com.createdAt.getMonth()+1 %>.<%= com.createdAt.getFullYear() %></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <%= com.text %>
+                    </div>
+                    <% }); };%>
+        </article>
+
+        <article>
+            <div class="foto" id="fotoUser">
+                <div>
+                    <p>
+                        <%= userName %><br>
+                            <span>Оставьте свой отзыв:</span>
+                    </p>
+                </div>
+            </div>
+            <form method="post" id="myform">
+                <textarea name="text" rows="10" cols="100" id="text"></textarea>
+                <span id="text_error"></span><br>
+
+                <div>
+                    <input id="Cancel" name="cancel" type="submit" value="Отмена">
+                    <input id="Save" name="save" type="submit" value="Отправить">
+                </div>
+            </form>
+        </article>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/animate.js'></script>
+<script src='/javascripts/stars.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Устройства</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/nav-device.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/main-form.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/device.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg" alt="Логотип">
+        <div class="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <p id="func">Функционал<img src="/images/arrow_white.svg" alt="Открыть список"></p>
+        <ul>
+            <% types.forEach(function(type){ %>
+                <li data-value="<%= type %>" class="sortDevice">
+                    <%= type %>
+                </li>
+                <% }); %>
+        </ul>
+        <p id="room">Комнаты <img src="/images/arrow_white.svg" alt="Открыть список"></p>
+        <ul>
+            <% templates.forEach(function(room){ %>
+                <li data-value="<%= room %>" class="sortDevice">
+                    <%= room %>
+                </li>
+                <% }); %>
+        </ul>
+        <a id="add" onclick="link('/add')"><img src="/images/add.svg" alt="Добавить устройство"></a>
+    </nav>
+
+    <main>
+        <article id="device">
+            <% devices.forEach(function(dev){ %>
+                <div id="<%=dev.id%>" class="device <% if(dev.condition == '0'){%>off<% } else {%>on<%}%>" data-value="<%= dev.condition %>">
+                    <div class="img alt='Устройство' <% if(dev.condition == '0'){%>imgOFF <% } else {%>imgON <%}%> <% switch (dev.type) {
+                        case 'Розетки' : %>
+                            soket
+                            <% break;
+                        case 'Климат-контроль' : %>
+                        climate_control
+                            <% break;
+                        case 'Солнцезащитные конструкции' : %>
+                            jalousie
+                            <% break;
+                        case 'Бытовые приботы' : %>
+                            teapot
+                            <% break;
+                        case 'Освещение' : %>
+                            bulb
+                            <% break;
+                        } %>">
+                    </div>
+                    <h3>
+                        <%= dev.login %>
+                    </h3>
+                    <p>
+                        <%= dev.type %> |
+                            <%= dev.room %>
+                    </p>
+                    <!--<a href="/edit/:<%=dev.id%>">Редактировать устройство</a>-->
+                    <a onclick="link('/edit/:<%=dev.id%>')">Редактировать устройство</a>
+                    <a class="deleteDevice" data-id="<%=dev.id%>">Удалить устройство</a>
+                </div>
+                <% }); %>
+        </article>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/deleteDevice.js'></script>
+<script src='/javascripts/sortDevice.js'></script>
+<script src='/javascripts/showList.js'></script>
+<script src='/javascripts/checkDevice.js'></script>
+<script src='/javascripts/animate.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+
+</html>

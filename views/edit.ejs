@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Устройства</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/nav-device.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/main-form.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg">
+        <div class="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <p>Функционал <img src="/images/arrow_white.svg"></p>
+        <ul>
+            <% types.forEach(function(type){ %>
+                <li>
+                    <%= type %>
+                </li>
+                <% }); %>
+        </ul>
+        <p>Комнаты <img src="/images/arrow_white.svg"></p>
+        <ul>
+            <% templates.forEach(function(room){ %>
+                <li>
+                    <%= room %>
+                </li>
+                <% }); %>
+        </ul>
+        <a id="add" onclick="link('/add')"><img src="/images/add.svg" alt="Добавить устройство"></a>
+    </nav>
+
+    <main>
+        <section id="form">
+            <form id="device" method="post">
+                <div>
+                    <label>Имя Устройсва*</label><br>
+                    <input id='name' name="name" type="text" value="<%= device.login %>">
+                    <a href="#" class="ask"></a><br>
+                    <span id="name_error"></span>
+                </div>
+                <div>
+                    <label>Тип: <%= device.type %></label><br>
+                    <select name="type" id="layout">
+                        <option disabled selected>Выберите тип устройсва</option>
+                        <% types.forEach(function(type){ %>
+                        <option value="<%=type%>">
+                            <%= type %>
+                        </option>
+                        <% }); %>
+                    </select>
+                    <a href="#" class="ask"></a>
+                    <a href="#" class="see"></a><br>
+                    <span id="password_error"></span>
+                </div>
+                <div>
+                    <label>Комната: <%= device.room %></label><br>
+                    <select name="room" id="layout">
+                        <option disabled selected>Выберите расположение устройства</option>
+                        <% templates.forEach(function(room){ %>
+                        <option value="<%=room%>">
+                            <%= room %>
+                        </option>
+                        <% }); %>
+                    </select>
+                    <a href="#" class="ask"></a>
+                    <a href="#" class="see"></a><br>
+                    <span id="password_error"></span>
+                </div>
+
+                <input id="Cancel" name="cancel" type="submit" value="Отмена">
+                <input id="Save" name="save" type="submit" value="Сохранить">
+            </form>
+        </section>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/animate.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+
+</html>

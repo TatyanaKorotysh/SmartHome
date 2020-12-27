@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Дом</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/nav.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/main-form.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg">
+        <div class="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <a onclick="link('/user')">
+                <li>Профиль</li>
+            </a>
+            <a onclick="link('/home')">
+                <li>Дом</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="info">
+            <form method="post" action="" enctype="multipart/form-data" id="myform">
+                <div class="foto" id="fotoHome"></div>
+                <div id="input">
+                    <input type="file" id="add_file" name="file" />
+                    <label for="add_file" id="lable">Добавить фото</label>
+                    <p>
+                        <%= homeName %>
+                    </p>
+                </div>
+            </form>
+        </section>
+
+        <section id="form">
+            <form id="layoutForm" method="post">
+                <div>
+                    <label>Имя Дома*</label><br>
+                    <input id='name' name="name" type="text" value="<%= homeName %>">
+                    <a class="ask">
+                        <img src="/images/question_circle.svg">
+                        <p>Имя, которое вы введете будет использоваться системой, для взаимодействия с вами</p>
+                    </a><br>
+                    <span id="name_error"></span>
+                </div>
+                <div>
+                    <label>Планировка:
+                        <% if(template=="0"){%>
+                        Однокомнатная квартира
+                        <% }
+                    else{
+                    if(template == "1"){%>
+                        Двухкомнатная квартира
+                        <%}
+                    else{%>
+                        Трехкомнатная квартира
+                        <%}
+                    }
+                    %>
+                    </label><br>
+                    <select name="layout" id="layout">
+                        <option disabled selected>Выберите планировку вашего дома</option>
+                        <option value="0">Однокомнатная квартира</option>
+                        <option value="1">Двухкомнатная квартира</option>
+                        <option value="2">Трехкомнатная квартира</option>
+                    </select>
+                    <a class="ask">
+                        <img src="/images/question_circle.svg">
+                        <p>Правильный выбор планировки обеспечит корректную рабооту приложения (выбор и создание устройств)
+                        </p>
+                    </a><br>
+                    <span id="password_error"></span>
+                </div>
+                <div id="submit">
+                    <input id="Cancel" name="cancel" type="submit" value="Отмена">
+                    <input id="Save" name="save" type="submit" value="Сохранить">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/showHelp.js'></script>
+<script src='/javascripts/animate.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+<script src='/javascripts/validateHome.js'></script>
+
+</html>

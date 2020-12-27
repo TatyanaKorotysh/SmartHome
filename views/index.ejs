@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Авторизация</title>
+
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/form.min.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <h1>Авторизация</h1>
+            <p>Для входа в приложение введите логин и пароль аккаунта</p>
+            <form method="post">
+                <span class="error"></span>
+                <input name="login" id="login" type="text" placeholder="Логин"><br>
+                <br>
+                <div>
+                    <input name="password" id="password" type="password" placeholder="Пароль">
+                    <a href="#" class="password-control"></a><br><br>
+                </div><br>
+
+                <input id="submit" type="submit" value="Войти">
+            </form>
+        </article>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/password-control.js'></script>
+<script src='/javascripts/auth.js'></script>
+
+</html>

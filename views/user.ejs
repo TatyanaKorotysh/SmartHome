@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Пользователь</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/nav.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/main-form.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg" alt="Логотип">
+        <div class="topnav" id="myTopnav">
+            <a onclick="link('/about')">О приложении </a>
+            <a onclick="link('/help')">Помощь</a>
+            <a onclick="link('/devices')">Устройства</a>
+            <a onclick="link('/user')">
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <a onclick="link('/user')">
+                <li>Профиль</li>
+            </a>
+            <a onclick="link('/home')">
+                <li>Дом</li>
+            </a>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="info">
+            <form method="post" enctype="multipart/form-data" id="myform">
+                <div class="foto" id="fotoUser"></div>
+                <div id="input">
+                    <input type="file" id="add_file" name="file" />
+                    <label for="add_file" id="lable" class="addImage">Добавить фото</label>
+                    <p>
+                        <%= userName %>
+                    </p>
+                </div>
+            </form>
+        </section>
+
+        <section id="form">
+            <form method="post">
+                <div>
+                    <label>Имя*</label><br>
+                    <input id='name' name="name" type="text" value="<%= userName %>" readonly="readonly">
+                    <a class="ask">
+                        <img src="/images/question_circle.svg" alt="Подсказка">
+                        <p>Имя, которое вы введете будет использоваться системой, для взаимодействия с вами</p>
+                    </a><br>
+                </div>
+                <div>
+                    <label>Пароль</label><br>
+                    <input id="password" name="password" type="password" value="<%= password %>">
+                    <a href="#" class="password-control"></a>
+                    <a class="ask">
+                        <img src="/images/question_circle.svg" alt="Подсказка">
+                        <p>Изменив значение этого поля вы поменяете пароль доступа к вашему акаунту. Пароль должен содержать минимум 6 символов и состоять из латинских букв и цифр</p>
+                    </a>
+                    <br>
+                </div>
+                <div>
+                    <label>Подтверждение пароля</label><br>
+                    <input id="confirm" name="confirm" type="password" value="<%= password %>">
+                    <a href="#" class="password-control"></a>
+                    <a class="ask">
+                        <img src="/images/question_circle.svg" alt="Подсказка">
+                        <p>Для обновления пароля необходимо повторить его в данном поле.</p>
+                    </a>
+                    <br>
+                </div>
+                <div>
+                    <label>Номер телефона</label><br>
+                    <input id='phone' name="phone" type="tel" value="<%= phone %>">
+                    <a class="ask">
+                        <img src="/images/question_circle.svg" alt="Подсказка">
+                        <p>Введите номер телефона. Это необходимо для дополнительной связи приложения с вами</p>
+                    </a><br>
+                </div>
+                <div>
+                    <label>e-mail</label><br>
+                    <input id='email' name="email" type="text" value="<%= email %>">
+                    <a class="ask">
+                        <img src="/images/question_circle.svg" alt="Подсказка">
+                        <p>Введите адрес вашей электронной почты для обеспечения дополнительной свзи с вами</p>
+                    </a><br>
+                </div>
+                <div id="submit">
+                    <p>
+                        <input id="Cancel" name="cancel" type="submit" value="Отмена">
+                        <input id="Save" name="save" type="submit" value="Сохранить">
+                    </p>
+                </div>
+            </form>
+
+        </section>
+    </main>
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/showHelp.js'></script>
+<script src='/javascripts/password-control.js'></script>
+<script src='/javascripts/animate.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+<script src='/javascripts/validateUser.js'></script>
+
+</html>

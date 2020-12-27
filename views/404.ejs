@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Пользователь</title>
+    <link rel="stylesheet" href="/stylesheets/dist/main.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/header.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/404.min.css">
+    <link rel="stylesheet" href="/stylesheets/dist/small-menu.min.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo.svg">
+        <div class="topnav" id="myTopnav">
+            <a href='/about'>О приложении </a>
+            <a href='/help'>Помощь</a>
+            <a href='/devices'>Устройства</a>
+            <a href='/user'>
+                <%= userName %>
+            </a>
+            <a href="javascript:void(0);" id="nav-icon" class="icon" onclick="myFunction()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="text">
+            <p id="left">4</p>
+            <div id="cercle"></div>
+            <p id="right">4</p>
+        </section>
+        <section id="back">
+            <p>К сожалению, такой стсраницы не существует</p>
+            <a onclick="history.back(); return false;">Вернуться назад</a>
+        </section>
+    </main>
+
+</body>
+
+<script src='/javascripts/jquery.min.js'></script>
+<script src='/javascripts/error.js'></script>
+<script src='/javascripts/small-menu.js'></script>
+
+</html>
